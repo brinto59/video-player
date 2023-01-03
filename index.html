@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Video controls</title>
+    <link rel="stylesheet" href="controls.css">
+    <script src="controls.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+        <div id="videoConsole">
+            <video id="video"></video>
+            <div id="controls">
+                <div id="orange-bar">
+                    <div id="orange-juice"></div>
+                </div>
+                <div id="buttons">
+                    <button id="step-backward"><i class="fas fa-step-backward"></i></button>
+                    <button id="playPause"></button>
+                    <button id="step-forward"><i class="fas fa-step-forward"></i></i></button>
+                    <button id="mute" >
+                        <div class="slash"></div>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <input type="range" name="vol" id="volume" min="0" max="100" step="1">
+                    <span id="current">00:00</span><span id="duration">/00:00</span>
+                    <button id="fullscreen" aria-label="Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

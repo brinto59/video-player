@@ -1,0 +1,123 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 700px;
+}
+#video{
+    width: 100%;
+}
+#videoConsole{
+    width: 100%;
+    max-width: 800px;
+    position:relative;
+    overflow:hidden;
+}
+#videoConsole:hover #controls{
+    transform:translateY(0);
+}
+#controls{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-wrap:wrap;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    transform:translateY(100%) translateY(-7px);
+    transition: transform 0.7s;
+}
+#buttons{
+    padding: 10px;
+}
+#buttons button{
+    background: none; 
+    border:0;
+    outline:0;
+    cursor:pointer;
+    padding: 0;
+    font-family:"Font Awesome 5 Free";
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    -webkit-font-smoothing:antialiased;
+}
+/* play pause button */
+#buttons #playPause::before{
+    content:'\f144';   
+}
+#buttons #playPause.play::before{
+    content:'\f144';
+}
+#buttons #playPause.pause::before{
+    content:'\f28b';
+}
+/* mute unmute button */
+#buttons #mute{
+    position:absolute;
+    right:260px;
+    font-size:20px;
+}
+#buttons #mute.muted{
+    opacity: 0.5;
+}
+#buttons #mute .slash{
+    position: absolute;
+    right: 9px;
+    top: 3px;
+    width: 2px;
+    height: 83%;
+    background-color: white;
+    transform: rotate(-50deg);
+    display: none;
+}
+#buttons #mute.muted .slash{ 
+    display: initial;
+}
+/* progress bar */
+#orange-bar{
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+}
+#orange-bar #orange-juice{
+    height: 10px;
+    width: 0;
+    background-color: orangered;
+}
+/* volume */
+#volume{
+    position: absolute;
+    right: 120px;
+    top:24px;
+}
+/* current time duration */
+#current,#duration{
+    color:white;
+    font-size:18px; 
+}
+#current{
+    position: absolute;
+    right: 50px;
+    top: 22px;
+}
+#duration{
+    position: absolute;
+    right:10px;
+    top:22px;
+}
+/* fullscreen  */
+#buttons #fullscreen{
+    position:absolute;
+    top: 20px;
+    right:91px ;
+    font-size: 22px;
+}
+/*step-backward*/
+#buttons #step-backward,#buttons #step-forward{
+    font-size:26px;
+}
